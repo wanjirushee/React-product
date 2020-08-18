@@ -11,53 +11,49 @@ class App extends React.Component{
 
       veg1: "Spinach",
       veg1Img:
-        "https://images.pexels.com/photos/2255925/pexels-photo-2255925.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+       <img src='./images/spinach.jpeg' alt=""/>,
+        
       spinachQuantity: 10,
 
       veg2: "Onion",
       veg2Img:
-        "https://images.pexels.com/photos/175415/pexels-photo-175415.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+        <img src='./images/onions.jpeg' alt=""/>,
       onionQuantity: 30,
 
       veg3: "Carrots",
       veg3Img:
-        "https://images.pexels.com/photos/3650647/pexels-photo-3650647.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+        <img src='./images/carrots' alt=""/>,
       carrotQuabtity: 50,
+
+      veg4:"kales",
+      veg4Img:
+      <img src='./images/kales.jpeg' alt=""/>,
+      kalesQuantity:50,
 
       type2: "Fruits",
 
       fruit1: " banana",
       fruit1Img:
-        "https://images.pexels.com/photos/365810/pexels-photo-365810.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+        <img src='./images/banana.jpeg' alt =""/>,
       bananaQuantity: 200,
 
       fruit2: " Mango",
       fruit2Img:
-        "https://images.pexels.com/photos/2294471/pexels-photo-2294471.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    <img src='./images/mango.jpeg' alt=""/>,
       mangoQuantity: 50,
-
-      appleImg:
-        "https://images.pexels.com/photos/1510392/pexels-photo-1510392.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-
+         
       appleImgQuantity: 30,
       appleImgPrice: 100,
 
-      bunchImg:
-        "https://images.pexels.com/photos/1510392/pexels-photo-1510392.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-
-      bunch2Img:
-        "https://images.pexels.com/photos/2872755/pexels-photo-2872755.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-
-      bunch3Img:
-        "https://images.pexels.com/photos/2820144/pexels-photo-2820144.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-    };
+      
+};
   }
 
   render() {
     return (
       <div style={{ textAlign: "center" }}>
-        <h1>GREEN KIOSK</h1>
-        <h> Shop Our Fruits and  {this.state.type1} </h>
+        <h1>Quick snap store</h1>
+        
 
         <section className="products">
           <div className="product-card">
@@ -65,10 +61,11 @@ class App extends React.Component{
               <img className="photo" src={this.state.appleImg} alt="" />
             </div>
             <div className="product-info">
-              <h5> Braeburn Apples</h5>
-              <p> Kes {this.state.appleImgPrice}</p>
+              <img src='./images/banana.jpeg'width="200"  height="200" alt=""/>
+              <h5> Banana's </h5>
+              <p> Ksh {this.state.appleImgPrice}</p>
               <p> Quantity {this.state.spinachQuantity} </p>
-              <button className="add-to-cart-btn" onClick="saveItem()">
+              <button className="btn" onClick="saveItem()">
                 Add To cart
               </button>
             </div>
@@ -79,11 +76,11 @@ class App extends React.Component{
               <img className="photo" src={this.state.veg1Img} alt="" />
             </div>
             <div className="product-info">
-              <h5> Kale (Sukuma Wiki)</h5>
-              <h6> kes 50 per Bunch</h6>
-              <h7> We all need alittle</h7>nn
+              <img src='./images/oranges.jpg'width="200" height="200" alt=""/>
+              <h5> Oranges</h5>
+              <p> ksh 80</p>
               <p> Quantity {this.state.spinachQuantity} </p>
-              <button className="add-to-cart-btn" onClick="saveItem()">
+              <button className="btn" onClick="saveItem()">
                 Add To cart
               </button>
             </div>
@@ -94,11 +91,12 @@ class App extends React.Component{
               <img className="photo" src={this.state.veg2Img} alt="" />
             </div>
             <div className="product-info">
-              <h5> Onion </h5>
-              <h6> kes 50 per KG </h6>
-              <h7> Who doesn't need onions? Shop this pantry staple here! </h7>
+              <img src='./images/pineapples.jpg'width="200" height="200" alt=""/>
+              <p> Pineapples </p>
+              <p> ksh 100 </p>
+              
               <p> Quantity {this.state.spinachQuantity} </p>
-              <button className="add-to-cart-btn" onClick="saveItem()">
+              <button className="btn" onClick="saveItem()">
                 Add To cart
               </button>
             </div>
@@ -109,18 +107,136 @@ class App extends React.Component{
               <img className="photo" src={this.state.bunchImg} alt="" />
             </div>
             <div className="product-info">
-              <h5> Apples</h5>
-              <p> Kes {this.state.appleImgPrice}</p>
+              <img src='./images/apples.jpeg' width="200" height="200" alt=""/>
+              <p> Apples</p>
+              <p> Ksh {this.state.appleImgPrice}</p>
               <p> Quantity {this.state.appleImgQuantity} </p>
-              <button className="add-to-cart-btn" onClick="saveItem()">
+              <button className="btn" onClick="saveItem()">
                 Add To cart
               </button>
             </div>
           </div> 
-          </section>
+      
+      
+    
+
+    <div className="product-card">
+            <div className="product-image">
+              <img className="photo" src={this.state.veg4Img} alt="" />
+            </div>
+            <div className="product-info">
+              <img src='./images/tangerine.jpeg'width="200" height="200" alt=""/>
+              <h5>Tangerine</h5>
+              <p> ksh 50</p>
+              <p> Quantity {this.state.kalesQuantity} </p>
+              <button className="btn" onClick="saveItem()">
+                Add To cart
+              </button>
+            </div>
+          </div>
+          
+        
+  
+    <div className="product-card">
+    <div className="product-image">
+      <img className="photo" src={this.state.veg4Img} alt="" />
+    </div>
+    <div className="product-info">
+      <img src='./images/peach.jpg'width="200" height="200" alt=""/>
+      <h5>Peach</h5>
+      <p> ksh 50</p>
+      <p> Quantity {this.state.peachQuantity} </p>
+      <button className="btn" onClick="saveItem()">
+        Add To cart
+      </button>
+    </div>
       </div>
-    );
-  }
+    
+
+    <div className="product-card">
+    <div className="product-image">
+      <img className="photo" src={this.state.veg4Img} alt="" />
+    </div>
+    <div className="product-info">
+      <img src='./images/kales.jpeg'width="200" height="200" alt=""/>
+      <h5>Kales</h5>
+      <p> ksh 50</p>
+      <p> Quantity {this.state.peachQuantity} </p>
+      <button className="btn" onClick="saveItem()">
+        Add To cart
+      </button>
+    </div>
+      </div>
+    
+  
+    <div className="product-card">
+    <div className="product-image">
+      <img className="photo" src={this.state.veg4Img} alt="" />
+    </div>
+    <div className="product-info">
+      <img src='./images/images.jpeg'width="200" height="200" alt=""/>
+      <h5>Carrots</h5>
+      <p> ksh 250</p>
+      <p> Quantity {this.state.peachQuantity} </p>
+      <button className="btn" onClick="saveItem()">
+        Add To cart
+      </button>
+    </div>
+      </div>
+      
+      
+  
+    <div className="product-card">
+    <div className="product-image">
+      <img className="photo" src={this.state.veg4Img} alt="" />
+    </div>
+    <div className="product-info">
+      <img src='./images/cassava.webp'width="200" height="200" alt=""/>
+      <h5>cassava</h5>
+      <p> ksh 50</p>
+      <p> Quantity {this.state.peachQuantity} </p>
+      <button className="btn" onClick="saveItem()">
+        Add To cart
+      </button>
+    </div>
+      </div>
+  
+    
+    
+<div className="product-card">
+    <div className="product-image">
+      <img className="photo" src={this.state.veg4Img} alt="" />
+    </div>
+    <div className="product-info">
+      <img src='./images/tomato.jpg'width="200" height="200" alt=""/>
+      <h5>Tomatoes</h5>
+      <p> ksh 350</p>
+      <p> Quantity {this.state.peachQuantity} </p>
+      <button className="btn" onClick="saveItem()">
+        Add To cart
+      </button>
+    </div>
+      </div>
+    
+      <div className="product-card">
+      <div className="product-image">
+        <img className="photo" src={this.state.veg4Img} alt="" />
+      </div>
+      <div className="product-info">
+        <img src='./images/courgete.jpeg'width="200" height="200" alt=""/>
+        <h5>courgette</h5>
+        <p> ksh 50</p>
+        <p> Quantity {this.state.courgeteQuantity} </p>
+        <button className="btn" onClick="saveItem()">
+          Add To cart
+        </button>
+      </div>
+        </div>
+        </section>
+        </div>
+          );
+   }
+
 }
 
 export default App;
